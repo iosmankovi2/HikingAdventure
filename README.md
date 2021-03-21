@@ -2,7 +2,8 @@
 
 # TEMA: Aplikacija za hiking pustolovinu
 
-
+![GitHub Logo]
+[GitHub Logo](image.png)
 
 ## Članovi tima:
 
