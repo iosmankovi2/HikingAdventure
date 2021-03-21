@@ -2,8 +2,7 @@
 
 # TEMA: Aplikacija za hiking pustolovinu
 
-![image]
-[image](C:\Users\Ilhana\Desktop\image.png.jpg)
+
 
 ## Članovi tima:
 
