@@ -1,8 +1,10 @@
 # Grupa3-HikingPustolovine
 
+
 # TEMA: Aplikacija za hiking pustolovinu
 
 ![](https://github.com/ooad-2020-2021/Grupa3-HikingPustolovine/blob/main/HA_image.png.jpg)
+
 
 ## Članovi tima:
 
@@ -12,9 +14,13 @@
 
 - Mirza Beširević
 
+
 ## Opis teme:
 
 Aplikacija je namijenjena za to da bude lični asistent korisnika koji se odluči na pustolovinu. Planinarenje je dobar vid relaksacije i aktivnosti, ali oni koji se tek susreću sa hajkingom su na početku neinformisani, zbog toga je važno imati neku predstavu o svemu. Planinarenje je prirodno vježbanje koje promoviše fizičku spremnost, ekonomično je, prikladno i ne zahtijeva posebnu opremu, naročito među onima koji imaju sjedilačka zanimanja. Ovo je predivan način da, prevezeni vlastitim nogama i noseći na leđima samo ono što vam treba za dan, otkrijete ljepotu prirode bilo kojim tempom. A, uz malo planiranja i pripreme, to je aktivnost koju može raditi gotovo svako. Aplikacija će obuhvatiti sve planinarske staze i ljepote Bosne i Hercegovine, te početnicima dati dobar uvid u ono što mogu očekivati od ovog mini putovanja. Sve ono što je jednom planinaru nepohodno se nalazi na jednom mjestu, te mu na taj način olakšava i pruža razne mogućnosti. Dovoljno je registrovati se i vaša avantura može da počne... 
+
+![](https://github.com/ooad-2020-2021/Grupa3-HikingPustolovine/blob/main/HA_image1.png.jpg)
+
 
 ## Funkcionalnosti sistema:
 
@@ -34,12 +40,14 @@ Aplikacija je namijenjena za to da bude lični asistent korisnika koji se odluč
 - Aplikacija omogućava korisniku da u slučaju da se izgubi, može potražiti pomoć tako što pošalje obavijest i svoju trenutnu lokaciju vodiču i članovima tima
 - Mogućnost slanja SOS-a ako se dogodi nešto ozbiljno
 
+
 ## Učesnici (akteri) sistema:
 
 - Administrator
 - Registrovani korisnik
 - Gost
 - Vodič
+
 
 ## Procesi:
 
