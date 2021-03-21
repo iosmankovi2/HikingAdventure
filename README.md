@@ -2,7 +2,7 @@
 
 # TEMA: Aplikacija za hiking pustolovinu
 
-![](image.png"Hiking adventure")
+
 
 ## Članovi tima:
 
