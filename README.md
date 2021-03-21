@@ -2,7 +2,7 @@
 
 # TEMA: Aplikacija za hiking pustolovinu
 
-
+![](https://github.com/ooad-2020-2021/Grupa3-HikingPustolovine/blob/main/HA_image.png.jpg)
 
 ## Članovi tima:
 
