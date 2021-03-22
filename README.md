@@ -25,7 +25,6 @@ Aplikacija je namijenjena za to da bude lični asistent korisnika koji se odluč
 ## Funkcionalnosti sistema:
 
 - mogućnost registracije/prijave na aplikaciju sa različitim privilegijama
-- mogućnost iznajmljivanje opreme
 - mogućnost unajmljivanja trenera/vodiča
 - mogućnost odabira grupe/tima na osnovu broja prijavljenih
 - mogućnost  pregleda informacija o lokacijama/planinskim stazama
@@ -47,6 +46,7 @@ Aplikacija je namijenjena za to da bude lični asistent korisnika koji se odluč
 - Registrovani korisnik
 - Gost
 - Vodič
+- Sistem uplate
 
 
 ## Procesi:
@@ -54,7 +54,6 @@ Aplikacija je namijenjena za to da bude lični asistent korisnika koji se odluč
 Registrovani korisnik:
 
 - mogućnost  izbora rute
-- mogućnost izbora opreme
 - mogućnost izbora tima 
 - mogućnost izbora vodiča
 - mogućnost komentarisanja i ocjenjivanja
