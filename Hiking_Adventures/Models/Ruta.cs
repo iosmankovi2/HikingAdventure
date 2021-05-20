@@ -12,9 +12,9 @@ namespace Hiking_Adventure.Models
     {
         public int ID { get; set; }
 
-        public string tezina;
         public string nazivRute { get; set; }
-        public string Opis { get; }
+        public string Opis { get; set; }
+        public string Tezina { get; set; }
 
 
         //Konstruktor

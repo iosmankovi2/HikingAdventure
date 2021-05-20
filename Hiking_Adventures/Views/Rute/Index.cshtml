@@ -1,35 +1,50 @@
 ﻿@model IEnumerable<Hiking_Adventure.Models.Ruta>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Rute";
 }
 
-<h1>Index</h1>
+<h1>Rute</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
+<font color="#F5F5F5">
+    Pronađi svoju sljedeću avanturu!
+
+</font>
+<div>
+
+    <form asp-controller="Rute" asp-action="Index" method="get">
+
+        <p>
+            <input type="text" name="Pronađi avanturu" />
+            <input type="submit" value="search" />
+        </p>
+    </form>
+
+
+
+
+</div>
+
 <table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.nazivRute)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
+
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model)
+        {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.nazivRute)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+
+            <a class="text-dark" asp-action="Details" asp-route-id="@item.ID">Detalji</a> |
+            <a class="text-dark" asp-controller="PrijavaRute" asp-action="Create">Prijavi se!</a>
+
+
             </td>
         </tr>
-}
+        }
     </tbody>
 </table>
+
+

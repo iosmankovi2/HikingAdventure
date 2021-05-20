@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Pocetna";
 }
 
 
@@ -7,6 +7,7 @@
 <style>
     body {
         background-image: url('https://i.pinimg.com/originals/7c/2d/42/7c2d42a4eaa69e8e4a5b3400b6fc3866.jpg');
+        height: 50px;
     }
 </style>
 
@@ -14,7 +15,9 @@
 
 <style>
     h1 {
+        position: relative;
         text-align: center;
+        height: 100px;
     }
 
     p {
@@ -23,10 +26,46 @@
 
     div {
         text-align: center;
+        height: 30px;
     }
 </style>
-<div id="container">
-    <h1>Hiking Adventure</h1>
+
+<h1>
+    <font color="#696969">
+        Hiking Adventure
+    </font>
+</h1>
+
+
+
+<p style="font-family:verdana">
+    <font color="#F5F5F5">
+        <i>  " The very basic core of a man’s living spirit is his passion for adventure. The joy of life comes from our encounters with new experiences, and hence there is no greater joy than to have an endlessly changing horizon, for each day to have a new and different sun.” </i>
+    </font>
+</p>
+
+
+<font color="#F5F5F5">
+    <p style="text-align:right;"> -Jon Krakauer, Into the Wild</p>
+
+</font>
+
+
+
+
+<font color="#F5F5F5">
+    Pronađi svoju sljedeću avanturu!
+
+</font>
+<div>
+
+    <form asp-controller="Rute" asp-action="Index" method="get">
+
+        <p>
+            <input type="text" name="Pronađi avanturu" />
+            <input type="submit" value="search" />
+        </p>
+    </form>
 </div>
 
 

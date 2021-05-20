@@ -26,9 +26,12 @@ namespace Hiking_Adventures
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-
+            
             services.AddDbContext<DataContext>(options =>
                     options.UseMySQL(Configuration.GetConnectionString("DataContext")));
+            
+            services.AddDbContext<Data2Context>(options =>
+                    options.UseMySQL(Configuration.GetConnectionString("Data2Context")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

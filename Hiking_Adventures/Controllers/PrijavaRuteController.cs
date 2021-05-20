@@ -5,39 +5,27 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Hiking_Adventure.Models;
 using Hiking_Adventures.Data;
 using Hiking_Adventures.Models;
 
 namespace Hiking_Adventures.Controllers
 {
-    public class RuteController : Controller
+    public class PrijavaRuteController : Controller
     {
-        private readonly DataContext _context;
-        
+        private readonly Data2Context _context;
 
-        public RuteController(DataContext context)
+        public PrijavaRuteController(Data2Context context)
         {
             _context = context;
         }
 
-        // GET: Rute
-
-        public async Task<IActionResult> Index(string searchString)
+        // GET: PrijavaRute
+        public async Task<IActionResult> Index()
         {
-            var rute = from m in _context.Ruta
-                         select m;
-
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                rute = rute.Where(s => s.nazivRute.Contains(searchString));
-            }
-
-            return View(await rute.ToListAsync());
+            return View(await _context.PrijavaRute.ToListAsync());
         }
 
-
-        // GET: Rute/Details/5
+        // GET: PrijavaRute/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -45,61 +33,39 @@ namespace Hiking_Adventures.Controllers
                 return NotFound();
             }
 
-            var ruta = await _context.Ruta
+            var prijavaRute = await _context.PrijavaRute
                 .FirstOrDefaultAsync(m => m.ID == id);
-            if (ruta == null)
+            if (prijavaRute == null)
             {
                 return NotFound();
             }
 
-            return View(ruta);
+            return View(prijavaRute);
         }
 
-        public async Task<IActionResult> Prijava_Rute(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var ruta = await _context.Ruta
-                .FirstOrDefaultAsync(m => m.ID == id);
-            if (ruta == null)
-            {
-                return NotFound();
-            }
-
-            return View(ruta);
-        }
-
-
-
-        // GET: Rute/Create
+        // GET: PrijavaRute/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Rute/Create
+        // POST: PrijavaRute/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-      /*  public async Task<IActionResult> Create([Bind("ID,nazivRute")] Ruta ruta)
+        public async Task<IActionResult> Create([Bind("ID,Ime,Prezime,Datum,eMail")] PrijavaRute prijavaRute)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(ruta);
+                _context.Add(prijavaRute);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(ruta);
+            return View();
         }
-        */
 
-
-        
-        // GET: Rute/Edit/5
+        // GET: PrijavaRute/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -107,22 +73,22 @@ namespace Hiking_Adventures.Controllers
                 return NotFound();
             }
 
-            var ruta = await _context.Ruta.FindAsync(id);
-            if (ruta == null)
+            var prijavaRute = await _context.PrijavaRute.FindAsync(id);
+            if (prijavaRute == null)
             {
                 return NotFound();
             }
-            return View(ruta);
+            return View(prijavaRute);
         }
 
-        // POST: Rute/Edit/5
+        // POST: PrijavaRute/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,nazivRute")] Ruta ruta)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Ime,Prezime,DatumRodjenja,eMail")] PrijavaRute prijavaRute)
         {
-            if (id != ruta.ID)
+            if (id != prijavaRute.ID)
             {
                 return NotFound();
             }
@@ -131,12 +97,12 @@ namespace Hiking_Adventures.Controllers
             {
                 try
                 {
-                    _context.Update(ruta);
+                    _context.Update(prijavaRute);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!RutaExists(ruta.ID))
+                    if (!PrijavaRuteExists(prijavaRute.ID))
                     {
                         return NotFound();
                     }
@@ -147,10 +113,10 @@ namespace Hiking_Adventures.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(ruta);
+            return View(prijavaRute);
         }
 
-        // GET: Rute/Delete/5
+        // GET: PrijavaRute/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -158,32 +124,30 @@ namespace Hiking_Adventures.Controllers
                 return NotFound();
             }
 
-            var ruta = await _context.Ruta
+            var prijavaRute = await _context.PrijavaRute
                 .FirstOrDefaultAsync(m => m.ID == id);
-            if (ruta == null)
+            if (prijavaRute == null)
             {
                 return NotFound();
             }
 
-            return View(ruta);
+            return View(prijavaRute);
         }
 
-        // POST: Rute/Delete/5
+        // POST: PrijavaRute/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var ruta = await _context.Ruta.FindAsync(id);
-            _context.Ruta.Remove(ruta);
+            var prijavaRute = await _context.PrijavaRute.FindAsync(id);
+            _context.PrijavaRute.Remove(prijavaRute);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool RutaExists(int id)
+        private bool PrijavaRuteExists(int id)
         {
-            return _context.Ruta.Any(e => e.ID == id);
+            return _context.PrijavaRute.Any(e => e.ID == id);
         }
     }
-
-
 }
