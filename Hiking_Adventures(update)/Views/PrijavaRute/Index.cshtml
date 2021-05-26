@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Hiking_Adventures.Models.PrijavaRute>
+
+@{
+    ViewData["Title"] = "Prijave";
+}
+
+<h1>Prijave</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prezime)
+            </th>
+            <th>
+
+                @Html.DisplayNameFor(model => model.Datum)
+                (Datum i vrijeme polaska)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.eMail)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prezime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Datum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.eMail)
+            </td>
+            <td>
+                
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
