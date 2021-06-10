@@ -1,0 +1,61 @@
+﻿
+<script src="https://maps.googleapis.com/maps/api/js?"></script>
+
+<html>
+<head>
+    <script src="https://maps.googleapis.com/maps/api/js?"></script>
+</head>
+<body>
+  
+
+    <div id="myDiv" style="width:100%;height:700px;"></div>
+
+    <script type="text/javascript">
+        
+
+            //Set the Latitude and Longitude of the Map
+            var myAddress = new google.maps.LatLng(43.856430, 18.413029);
+        var Trebevic = new google.maps.LatLng(43.824, 18.449);
+        var Skakavac = new google.maps.LatLng(43.9486, 18.4489);
+        var Ormanj = new google.maps.LatLng(43.8097, 18.1550);
+
+            //Create Options or set different Characteristics of Google Map
+            var mapOptions = {
+                center: myAddress,
+                zoom: 10,
+                minZoom: 10,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+
+            //Display the Google map in the div control with the defined Options
+            var map = new google.maps.Map(document.getElementById("myDiv"), mapOptions);
+
+            //Set Marker on the Map
+            var marker1 = new google.maps.Marker({
+                position: myAddress,
+                animation: google.maps.Animation.BOUNCE,
+            });
+
+            var marker2 = new google.maps.Marker({
+                position: Trebevic,
+                animation: google.maps.Animation.BOUNCE,
+            });
+
+        var marker3 = new google.maps.Marker({
+            position: Skakavac,
+            animation: google.maps.Animation.BOUNCE,
+        });
+
+        var marker4 = new google.maps.Marker({
+            position: Ormanj,
+            animation: google.maps.Animation.BOUNCE,
+        });
+
+        
+        marker2.setMap(map);
+        marker3.setMap(map);
+        marker4.setMap(map);
+        
+    </script>
+</body>
+</html>  
